@@ -15,6 +15,7 @@
   "plugins": ["react"],
   "parser": "babel-eslint",
   "rules": {
-    "react/destructuring-assignment": "off"
+    "react/destructuring-assignment": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
