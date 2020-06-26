@@ -1,26 +1,10 @@
 import React from 'react';
-import radium from 'radium';
-
-const styles = {
-  backgroundColor: '#ff0000',
-  width: 320,
-  padding: 20,
-  borderRadius: 5,
-  border: 'none',
-  outline: 'none',
-  ':hover': {
-    color: '#fff',
-  },
-  ':active': {
-    position: 'relative',
-    top: 2,
-  },
-};
+import './button.css';
 
 const Button = () => (
-  <button type="button" style={styles}>
+  <button type="button" className="button">
     Click me!
   </button>
 );
 
-export default radium(Button);
+export default Button;
