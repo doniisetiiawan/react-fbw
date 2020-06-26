@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import Uncontrolled from './components/uncontrolled';
+import Controlled from './components/controlled';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Uncontrolled />
+        <Controlled />
       </header>
     </div>
   );
