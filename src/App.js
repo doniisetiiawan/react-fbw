@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import Controlled from './components/controlled';
+import JSONSchemaForm from './components/json-schema-form';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Controlled />
+        <JSONSchemaForm />
       </header>
     </div>
   );
