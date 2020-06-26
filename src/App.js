@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import Reset from './components/reset';
+import Transition from './components/transition';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Reset />
+        <Transition />
       </header>
     </div>
   );
