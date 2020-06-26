@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import Circle from './components/circle';
+import FontSize from './components/font-size';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Circle x={20} y={20} radius={20} fill="blue" />
+        <FontSize />
       </header>
     </div>
   );
