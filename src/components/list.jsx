@@ -1,29 +1,26 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Item from './item';
+import { connect } from 'react-refetch';
+import Gist from './gist';
 
-const List = ({ collection, textKey, titleKey }) => (
-  <ul>
-    {collection.map((item) => (
-      <Item
-        key={item.id}
-        text={item[textKey]}
-        title={item[titleKey]}
-      />
-    ))}
-  </ul>
+const List = ({ gists }) => gists.fulfilled && (
+<ul>
+  {gists.value.map((gist) => (
+    <Gist key={gist.id} {...gist} />
+  ))}
+</ul>
 );
 
-export default List;
+const connectWithGists = connect(({ username }) => ({
+  gists: `https://api.github.com/users/${username}/gists`,
+}));
+
+export default connectWithGists(List);
 
 List.propTypes = {
-  collection: PropTypes.arrayOf(PropTypes.object),
-  textKey: PropTypes.string,
-  titleKey: PropTypes.string,
+  gists: PropTypes.objectOf(PropTypes.any),
 };
 
 List.defaultProps = {
-  collection: [],
-  textKey: '',
-  titleKey: '',
+  gists: {},
 };
