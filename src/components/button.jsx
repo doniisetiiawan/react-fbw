@@ -1,30 +1,26 @@
 import React from 'react';
+import radium from 'radium';
 
-class Button extends React.Component {
-  handleEvent = (event) => {
-    switch (event.type) {
-      case 'click':
-        console.log('clicked');
-        break;
-      case 'dblclick':
-        console.log('double clicked');
-        break;
-      default:
-        console.log('unhandled', event.type);
-    }
-  };
+const styles = {
+  backgroundColor: '#ff0000',
+  width: 320,
+  padding: 20,
+  borderRadius: 5,
+  border: 'none',
+  outline: 'none',
+  ':hover': {
+    color: '#fff',
+  },
+  ':active': {
+    position: 'relative',
+    top: 2,
+  },
+};
 
-  render() {
-    return (
-      <button
-        type="button"
-        onClick={this.handleEvent}
-        onDoubleClick={this.handleEvent}
-      >
-        Click me!
-      </button>
-    );
-  }
-}
+const Button = () => (
+  <button type="button" style={styles}>
+    Click me!
+  </button>
+);
 
-export default Button;
+export default radium(Button);

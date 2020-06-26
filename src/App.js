@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import FontSize from './components/font-size';
+import Button from './components/button';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FontSize />
+        <Button />
       </header>
     </div>
   );
