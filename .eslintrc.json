@@ -17,6 +17,7 @@
   "rules": {
     "react/destructuring-assignment": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-return-assign": "off"
   }
 }
