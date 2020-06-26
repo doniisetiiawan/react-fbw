@@ -1,10 +1,16 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import MyComponent from './components/my-component';
+import Counter from './components/counter';
 
 function App() {
-  return <MyComponent />;
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Counter />
+      </header>
+    </div>
+  );
 }
 
 export default App;
