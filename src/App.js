@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import List from './components/list';
+import Todos from './components/todos';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <List />
+        <Todos />
       </header>
     </div>
   );
