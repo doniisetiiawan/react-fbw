@@ -1,26 +1,35 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { connect } from 'react-refetch';
-import Gist from './gist';
+/* eslint-disable react/no-access-state-in-setstate */
+import React, { Component } from 'react';
 
-const List = ({ gists }) => gists.fulfilled && (
-<ul>
-  {gists.value.map((gist) => (
-    <Gist key={gist.id} {...gist} />
-  ))}
-</ul>
-);
+class List extends Component {
+  constructor(props) {
+    super(props);
 
-const connectWithGists = connect(({ username }) => ({
-  gists: `https://api.github.com/users/${username}/gists`,
-}));
+    this.state = {
+      items: ['foo', 'bar'],
+    };
+  }
 
-export default connectWithGists(List);
+  handleClick = () => {
+    const items = this.state.items.slice();
+    items.unshift('baz');
+    this.setState({
+      items,
+    });
+  };
 
-List.propTypes = {
-  gists: PropTypes.objectOf(PropTypes.any),
-};
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.state.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <button onClick={this.handleClick}>+</button>
+      </div>
+    );
+  }
+}
 
-List.defaultProps = {
-  gists: {},
-};
+export default List;

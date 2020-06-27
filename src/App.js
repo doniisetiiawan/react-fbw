@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import Button from './components/button';
+import List from './components/list';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button />
+        <List />
       </header>
     </div>
   );
