@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
-import Todos from './components/todos';
+import Counter from './components/counter';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Todos />
+        <Counter initialCount={1} />
       </header>
     </div>
   );
