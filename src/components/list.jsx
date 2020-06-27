@@ -1,5 +1,6 @@
 /* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from 'react';
+import Item from './item';
 
 class List extends Component {
   constructor(props) {
@@ -10,10 +11,7 @@ class List extends Component {
     };
   }
 
-  shouldComponentUpdate = (
-    nextProps,
-    nextState,
-  ) => this.state.items !== nextState.items;
+  shouldComponentUpdate = (nextProps, nextState) => this.state.items !== nextState.items;
 
   handleClick = () => {
     const items = this.state.items.slice();
@@ -28,7 +26,7 @@ class List extends Component {
       <div>
         <ul>
           {this.state.items.map((item) => (
-            <li key={item}>{item}</li>
+            <Item key={item} item={item} />
           ))}
         </ul>
         <button onClick={this.handleClick}>+</button>
