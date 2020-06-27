@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import Item from './item';
 
+const statuses = ['open', 'close'];
+
 class List extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +32,7 @@ class List extends Component {
               key={item}
               item={item}
               onClick={console.log}
+              statuses={statuses}
             />
           ))}
         </ul>
