@@ -1,4 +1,5 @@
 /* eslint-disable react/no-access-state-in-setstate */
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class Counter extends Component {
@@ -29,3 +30,11 @@ class Counter extends Component {
 }
 
 export default Counter;
+
+Counter.propTypes = {
+  initialCount: PropTypes.number,
+};
+
+Counter.defaultProps = {
+  initialCount: 0,
+};
