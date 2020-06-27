@@ -10,6 +10,11 @@ class List extends Component {
     };
   }
 
+  shouldComponentUpdate = (
+    nextProps,
+    nextState,
+  ) => this.state.items !== nextState.items;
+
   handleClick = () => {
     const items = this.state.items.slice();
     items.unshift('baz');
